@@ -2,11 +2,17 @@
 ## Bike Share EDA Code
 ##
 
+install.packages("tidymodels")
+install.packages("installr")
+
 ##Libraries
 library(tidyverse)
 library(vroom)
 library(ggplot2)
-install.packages("DataExplorer")
+library(gridExtra)
+library(tidymodels)
+library(installr)
+updateR()
 
 ##Read in the Data
 bike <- vroom("train.csv")
@@ -42,5 +48,8 @@ plot4 <- ggplot(bike, aes(x = weather, y = count, fill = weather)) +
   theme_minimal()
 
 # Combine the plots into a 2x2 grid
-library(gridExtra)
 grid.arrange(plot1, plot2, plot3, plot4, ncol = 2)
+
+
+
+
