@@ -11,8 +11,6 @@ library(vroom)
 library(ggplot2)
 library(gridExtra)
 library(tidymodels)
-library(installr)
-updateR()
 
 ##Read in the Data
 bike <- vroom("train.csv")
